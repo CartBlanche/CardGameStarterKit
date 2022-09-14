@@ -1,0 +1,485 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--TO READ THIS HELP FILE, RIGHT-CLICK ON THE FILE NAME IN THE
+    SOLUTION EXPLORER PANE AND SELECT "VIEW IN BROWSER"
+
+#f8f7ef
+-->
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Microsoft Visual C# Card Game Starter Kit</title>
+<style>
+<!--
+BODY         { background: url('Images/top-vc.gif') repeat-x; font-family: Verdana; font-size: 67% }
+.maindiv     { background: url('Images/side-vc.gif') repeat-y; padding-left: 55px; padding-top: 5px; position: relative; height: 50px }
+P            { margin-top: 0; margin-bottom: 6px; line-height:130% }
+H1           { margin-top: 20px; margin-bottom: 12px; font-size:190% }
+H2           { color: #585F56; left: -55px; position: relative; margin-top: 21px; margin-bottom: 9px; font-size:170% }
+H3           { margin-top: 21px; margin-bottom: 9px; font-size: 140%;  font-weight: bold}
+H4           { margin-top: 18px; margin-bottom: 9px; font-size: 140%; font-weight: bold}
+OL           { margin-top: 0; margin-bottom: 9px; line-height:130%}
+UL           { margin-top: 0; margin-bottom: 9px; line-height:130%}
+LI           { margin-top: 0; margin-bottom: 6px }
+BLOCKQUOTE   { margin-left: 20px }
+PRE          {font-family: "Courier New"; font-size:11.0pt; BACKGROUND: #FFFFCC;  padding-top: 6px; padding-bottom: 6px;}
+TABLE        { padding: 4px; BACKGROUND: #f8f7ef; BORDER: #DDDCD6 1px solid; BORDER-COLLAPSE: collapse; margin-bottom: 9px; }
+TR           { vertical-align: top} 
+TD           { padding: 4px; font-family: Verdana; font-size: 67%; line-height: 130%} 
+.contents    { line-height: 150%; font-color: #003300 }
+DIV.CodeBlock   { font-family: "Courier New"; font-size: 100%; margin-bottom: 6px; BACKGROUND: #f8f7ef; BORDER: #eeede6 1px solid; padding: 10px; }
+.CodeInline  { font-family: "Courier New" }
+.ProcedureLabel {margin-top: 12px; font-style: italic; font-weight: bold; color: #0D4CC3 } 
+.FileNameCol { padding: 6px; BACKGROUND: #eeede6; width=220px; font-weight: bold}
+.keyword { font-size:11.0pt;     font-family: "Courier New"; color: "blue"}
+.type { font-size:11.0pt;     font-family: "Courier New"; color: "teal"}
+.string{ font-size:11.0pt;     font-family: "Courier New"; color: "maroon"}
+-->
+</style>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="20">
+<div class="maindiv">
+
+<a name="top">
+
+<!-- MAIN CONTENT BEGINS -->
+
+</a>
+
+<p><a name="top">Microsoft Visual C# Starter Kit </a></p>
+<h1><a name="top">Starter Kit: Card Game</a></h1>
+<p><b><a name="top">Contents:</a></b></p>
+
+<p class="contents">
+<a href="#Introduction_">Introduction</a>
+<br><a href="#Goals">Goals</a>
+<br><a href="#Getting_Started">Getting Started</a>
+<br><a href="#How_It_Works">How the Card Game Works</a>
+<br><a href="#Concepts">Concepts</a>
+<br><a href="#Extending_the_CardGame">Extending the Card Game</a>
+<br><a href="#ForMoreInformation">For More Information</a>
+<br>
+
+</p>
+
+<h2>
+<A href="#top"><IMG src="Images\topjump-vc.gif" border="0"></A>
+<a name="Introduction_">Introduction</a>
+</h2>
+
+
+<p><img border="0" src="Images\blackjack.jpg"  alt="Card Game" align="right" style="margin-left: 15px; margin-bottom: 10px">
+<p>This Visual C# Starter Kit is a complete BlackJack card game. The project comes ready to compile and
+   run, and it's easy to customize with only a little extra C# programming. The section
+<a href="#Extending_the_CardGame">Extending the Card Game</a> contains a list of some customizations 
+you might make. You are also free to use the source code as the basis for
+your own card game projects, and share your work with others or upload it to
+the Internet.
+</p>
+<p><b>Note:</b> This documentation assumes that you have a basic knowledge of programming
+concepts and the Visual C# environment. You can learn more about these topics in the product documentation
+by clicking <b>Help</b> on the File Menu, or by positioning the mouse cursor on language keywords or user interface elements such as windows
+or dialog boxes, and pressing <b>F1</b>.
+</p>
+
+<h2>
+<A href="#top"><IMG src="Images\topjump-vc.gif" border="0"></A>
+<a name="Goals">Goals</a>
+</h2>
+
+<p>After reading through this starter kit documentation you will understand how the Card 
+Game program works, and a few ways in which you can customize it using Visual C#. This 
+starter kit demonstrates:</p>
+<ul>
+<li>Windows Forms &mdash; use graphics on a form to create a UI</li>
+<li>Settings and Resources &mdash; use the settings and resources designers to store information and images</li>
+<li>Regions &mdash; to organize blocks of code</li>
+<li>C# 2.0 Language &mdash; including generics</li>
+</ul>
+
+
+
+<h2>
+<A href="#top"><IMG src="Images\topjump-vc.gif" border="0"></A>
+<a name="Getting_Started">Getting Started</a>
+</h2>
+
+<p><b>Building and Running the Card Game</b></p>
+
+<p>
+Once the card game project is loaded into the Visual C# environment, you can compile and
+run the program in one step. Press <b>F5</b> to build and start the game under
+the debugger. The game launches and displays the opening screen. From here, you can start
+a new session, open the options window, or exit the game.
+</p>
+
+<p><b>BlackJack Rules</b></p>
+
+<p>The objective of BlackJack is to get a hand with a total card value that is closer to 21 
+than that of the dealer, without going over 21. BlackJack occurs when you or the dealer 
+have a hand of 21 with your first two cards.
+</p>
+
+<p>In BlackJack, the values of the cards are as follows:</p>
+
+<ul>
+<li>An Ace can count as either a 1 or 11.</li>
+<li>The cards 2 through 9 contain the value indicated on the card.</li>
+<li>Jacks, Queens, Kings, and 10 are all valued at 10.</li>
+</ul>
+<p> 
+	The dealer always plays his hand the same way, implementing the “Dealer stands on
+	all 17s rule.” This means that the dealer will continue to Hit (take cards) until his total
+	17 or greater. An Ace in the dealer’s hand is counted as 11, unless this causes the dealer 
+	to "bust" (go over 21).
+</p>
+
+<p><b>Playing the Default BlackJack Game</b></p>
+
+<p> The amount of money you currently have is displayed in the “My Account” box at the 
+upper right of the screen. You will start with a default balance of $3000 (this amount can be changed 
+by going to <b>Project</b> | <b>CardGame Properties</b> | <b>Settings</b> and changing the InitBalance field). The game is over when you have no money left.
+</p>
+
+<p class="ProcedureLabel">To play BlackJack:</p>
+<ol>
+<li>
+Select the amount of money you want to bet using the buttons in the bottom half
+of the screen.</li>
+<li>Click <b>Deal</b>.<br> You are dealt two cards from the deck face-up. The dealer is also dealt two cards, 
+one of which will be face-up.</li>
+
+<li>You can now click <b>Hit</b>, to get another card, or <b>Stand,</b> to keep 
+your cards, and have the dealer finish dealing cards to his own hand.</li>
+
+<li>If the total value of your cards exceeds 21, you lose the hand. If the
+dealer’s hand exceeds 21, or if your own total is greater than the dealer’s,
+but less than 21, you win.</li>
+</ol>
+
+
+<h3>Making a Quick Change to the Source Code</h3>
+
+<p>Editing the source code to change the way the program works is easy. Here’s an example 
+that implements a <b>Double Down</b> option. <b>Double Down</b> allows you to double 
+your bet after seeing the initial cards you have been dealt.
+</p>
+
+<p>&nbsp;</p>
+
+<p class="ProcedureLabel">To add a Double Down button:</p>
+
+<p>The code that implements <b>Double Down</b> is already present, but the 
+<b>Double Down</b> button is not enabled.
+</p>
+
+<ol>
+<li>Exit the game if it is running.</li>
+<li>In <b>Solution Explorer</b>, double-click <b>BlackJackForm.cs</b>.</li>
+<li>Scroll down in the designer until the <b>Double Down</b> button is visible.</li>
+<li>Right-click the <b>Double Down</b> button, and then on the 
+shortcut menu, click <b>Properties</b>.</li>
+<li>In the <b>Properties</b> window, find the <b>Visible</b> property. Double-click
+<b>False</b> to change it to <b>True</b>.</li>
+<li>Press <b>F5</b> to compile and run the game.</li>
+</ol> 
+<p><b>Sharing Your Version of the Card Game with Friends</b></p>
+
+<p>Now that you have a customized version of the card game, you can share it with your 
+friends and family. Please note that this application uses the .NET Framework version 2.0,
+so any computer running it needs to have this version of the .NET Framework installed. 
+The .NET Framework is installed as part of Visual C#, but it can also be installed directly 
+from the <a href="http://go.microsoft.com/fwlink/?linkid=26341&amp;clcid=0x409"> Microsoft
+ Beta Web site</a>. If you plan to share your card game with friends, you should let 
+ them know that they need to install the new .NET Framework as well. 
+</p>
+
+<h2>
+<A href="#top"><IMG src="Images\topjump-vc.gif" border="0"></A>
+<a name="How_It_Works">How the Card Game Works</a>
+</h2>
+
+<p><b>Card Game Project Program Files</b></p>
+
+<p>The project contains ten different C# source-code files, and a folder containing all the 
+graphics used by the game. The source-code files perform the following functions: </p>
+
+	<p>&nbsp;</p>
+
+<table width="97%" style="border-collapse: collapse">
+<tr><td style='width:100.0%;background:#eeede6;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+<p><b>Main Program</b></p> </td> </tr>
+<tr><td><p><i>Program.cs</i></p></td> </tr>
+<tr><td><p>Contains the <b>Main()</b> method &mdash; the location where the program 
+begins execution. The first thing that happens is the StartForm Windows form 
+is displayed.</p></td></tr>
+</table>
+
+	<p>&nbsp;</p>
+
+<table border='0' cellspacing='0' cellpadding='0' width="97%">
+<tr><td style='width:100.0%;background:#eeede6;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+<p><b>Options Dialog Box</b></p></td></tr>
+<tr><td><p><i>OptionsForm.cs</i></p></td></tr>
+<tr><td><p>Contains the Windows Form that displays the settings options. From this 
+dialog box, you can change the name and image of the player. </p></td></tr>
+</table>
+
+	<p>&nbsp;</p>
+
+	<table border='0' cellspacing='0' cellpadding='0' width="97%">
+<tr><td width="100%" style='width:100.0%;background:#eeede6;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+<p><b>Start Screen</b></p></td></tr>
+<tr><td><p><i>StartForm.cs</i></p></td></tr>
+<tr><td><p>This form displays the splash screen and offers the choice of playing the 
+game, changing the options, or quitting the application.</p></td></tr>
+</table>
+
+	<p>&nbsp;</p>
+
+	<table border='0' cellspacing='0' cellpadding='0' width="97%">
+<tr><td width="100%" style='width:100.0%;background:#eeede6;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+<p><b>BlackJack Game</b></p></td></tr>
+<tr><td><p><i>Blackjackgame.cs</i></p></td></tr>
+<tr><td><p>Contains code that contains the rules and manages the game of BlackJack.</p></td></tr>
+<tr><td><p><i>Player.cs</i></p></td></tr>
+<tr><td><p>Contains the code that describes individual players–their name, the amount of 
+        money they have, and their current hand of cards. </p> </td></tr>
+<tr> <td> <p> <i> State.cs </i> </p> </td></tr>
+<tr> <td> <p> Contains the data type that describes the current state of the game.</td></tr>
+</table>
+
+	<p>&nbsp;</p>
+
+	<table border='0' cellspacing='0' cellpadding='0' width="97%" >
+<tr> <td width="100%" style='width:100.0%;background:#eeede6;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+<p> <b> Card Game Framework</b></p></td></tr>
+<tr> <td> <p> <i> Card.cs </i> </p> </td></tr>
+<tr> <td> <p> A class that describes a given card: suit, value, and a flag indicating 
+    whether it is face-up or face-down.</p></td></tr>
+<tr><td><p><i>Deck.cs</i></p></td></tr>
+<tr><td><p>A class that describes a deck of cards, and provides methods for shuffling and 
+    picking a card.</p></td></tr>
+<tr><td><p><i>Hand.cs</i></p></td></tr>
+<tr><td><p>Contains the Hand class, which describes a hand of cards, including the number 
+and type of cards. Also contains the BlackJackHand class, which provides methods for 
+comparing hands and calculating total hand values.</p></td></tr>
+</table>
+
+<p>&nbsp;</p>
+
+	<table border='0' cellspacing='0' cellpadding='0' width="97%">
+<tr><td width="100%" style='width:100.0%;background:#eeede6;padding:3.0pt 3.0pt 3.0pt 3.0pt'>
+<p><b>BlackJack User Interface</b></p></td></tr>
+<tr><td><p><i>BlackJackForm.cs</i></p></td>
+</tr>
+<tr><td><p>This file contains the Windows Form that provides the BlackJack game
+ with its user interface. It contains the <b>PictureBox</b> controls that display the 
+ current cards, and buttons that the user can click to perform actions such as betting.</p></td></tr>
+</table>
+
+<h2>
+<A href="#top"><IMG src="Images\topjump-vc.gif" border="0"></A>
+<a name="Concepts">Concepts</a>
+</h2>
+
+<h3>Displaying Graphics on a Windows Form</h3>
+
+<p>Graphics are very important in a game, and are used in several ways in this application. 
+For example, the Windows Form <b>StartForm</b> displays a background image specified in the 
+form’s <b> BackGroundImage </b> property. The buttons displayed on this form are standard 
+buttons with their  <b>BackGroundImage </b> property set also. The button’s text property 
+is displayed over the background image.</p>
+
+<p>The buttons on the <b>BlackJackForm.cs </b>form are created in the same way. However, 
+the playing cards are different. If you look at the BlackJackForm in Design view 
+(right-click on the file name in Solution Explorer and select <b>View Designer</b>),
+ you will see that there are <b>PictureBox </b>controls positioned on the table. To display
+  the cards as they are dealt, these <b>PictureBox</b> controls have their <b>Image</b> 
+  properties set to the image file specified by the values set in the project’s <b>Properties</b> window.</p>
+
+<h3>Organizing Your Code Using Regions</h3>
+
+<p>When you open up a file such as <b>BlackJackGame.cs</b> in the code editor, you will notice 
+that it’s divided into regions that you can expand and contract. Regions do not change the source 
+code in any way, but they do make it easier to read.</p>
+
+            <p>You can make any section of code a region by enclosing it with the #region &lt;name&gt; and
+                #endregion keywords, like this:</p>
+
+	<p>&nbsp;</p>
+
+	<pre>
+ <span class="keyword">#region</span> Fields
+
+	<span class="keyword">private</span><span class="type"> Deck</span> deck;
+	<span class="keyword">private</span><span class="type"> Player</span> dealer;
+	<span class="keyword">private</span> <span class="type">Player</span> player;
+
+ <span class="keyword">#endregion</span>
+
+</pre>
+
+
+<p>&nbsp;</p>
+
+<h2>
+<A href="#top">
+<IMG src="Images\topjump-vc.gif" border="0"></A><a name="Extending_the_CardGame">Extending the Card Game</a>
+</h2>
+
+<h3>Changing the Graphics</h3>
+
+<p>The graphics that are displayed for the card backgrounds and player photographs are
+stored in the card game’s local directory. It’s easy to change the default
+directory to point to your own directory or to point to a different set of
+images.</p>
+
+<p class="ProcedureLabel">To change the default images used:</p>
+<p>&nbsp;</p>
+<ol>
+<li>On the Project menu, click <b>CardGame Properties</b>.</li>
+<li>Click the <b>Settings</b> tab.</li>
+<li>Change the value associated with the item you want to change. For example, to
+display your own photograph to represent the player, change the path name
+and image file name stored with the <b>PlayerImage</b> field.</li>
+</ol>
+<h3>Changing the Rules</h3>
+
+<p>The code that defines the rules for the BlackJack game, and the behavior of the dealer
+are stored in the class <b>BlackJackGame.cs</b>. You can edit the rules to make
+the game easier or harder to play. For example, currently the dealer will not take
+another card if the hand total is less than 17. Here is how you would change that
+limit to 21 and cause the dealer to always lose:</p>
+
+<p class="ProcedureLabel">To change the dealer’s stand limit:</p>
+
+<p>&nbsp;</p>
+
+<ol>
+<li>In the Solution Explorer, double-click the file  <b>BlackJackGame.cs</b>.</li>
+<li>Expand the <b>Game Methods</b> region.</li>
+<li>Find the method <b>DealerPlay()</b>.</li>
+<li>Change the line:<br>
+<br>
+<pre>
+<span class="keyword"> if</span>(dealer.Hand.GetSumOfHand() &lt; 17)
+</pre>
+
+<p>to be:</p>
+<pre>
+<span class="keyword"> if</span>(dealer.Hand.GetSumOfHand() &gt; <b>21</b>)
+</pre>
+</li>
+</ol>
+<h3>Add Sound Effects</h3>
+
+<p>Adding sound effects can be the finishing touch for your game. Here is how to add a
+sound effect that plays when the dealer busts. Other sound effects can be added in a
+similar way.</p>
+
+<p class="ProcedureLabel">To add a sound effect:</p>
+
+<ol>
+<li>In the <b>Solution Explorer</b>, right-click the file <b>BlackJackForm.cs</b> and
+select <b>View Code</b>.</li>
+<li>Expand the region <b>Game Methods</b> if necessary, and find the method called
+<b>EndGame(EndResult endState).</b></li>
+<li>Take the original piece of code
+<pre>
+
+ <span class="keyword">private void</span><span class="type"> EndGame</span>(<span class="type">EndResult</span>  endState)
+ {
+	<span class="keyword">switch</span> (endState)
+	{
+	    <span class="keyword">case</span> <span class="type">EndResult</span>.DealerBust:
+	        txtGameOver.Text = <span class="string">"Dealer Bust!"</span>;
+	        PlayerWin();
+	        <span class="keyword">break</span>;
+
+</pre>
+
+<p>and add the following bolded lines:</p>
+
+<pre>
+
+ <span class="keyword">private void</span><span class="type"> EndGame</span>(<span class="type">EndResult</span>  endState)
+ {
+	<b>System.Media.SoundPlayer sound = new System.Media.SoundPlayer();</b>
+	<span class="keyword">switch</span> (endState)
+	{
+	    <span class="keyword">case</span> <span class="type">EndResult</span>.DealerBust:
+	        txtGameOver.Text = <span class="string">"Dealer Bust!"</span>;
+	        PlayerWin();
+	        <b>sound.SoundLocation = @"C:\WINDOWS\Media\chord.wav";
+	        sound.Play();</b>
+	        <span class="keyword">break</span>;
+
+</pre>
+</li></ol>
+
+
+<p>The next time you play the game and the dealer busts, you should hear a sound.</p>
+<p>You can add similar lines of code to the other case statements to add sound effects for the other
+ways in which the game ends. The SoundPlayer control will replay standard WAV sound files, so you can record your own sounds
+or download them from the Internet.
+</p>
+
+<h3>More Suggestions</h3>
+<p>The card game application is designed to be easily extended and customized. Some ideas for extending it are:
+</p>
+<ul>
+	<li>
+		<b>
+			<i>Add Split and Insurance functionality:</i>
+		</b>
+		<br>
+Finish implementing additional BlackJack game functionality.
+	</li>
+<li><b><i>Add Multi-player functionality:</i></b><br>
+Use the player class to create a game with multi-player.</li>
+<li><b><i>Add sound file and image selection in the Options Panel:</i></b>
+<br>Use the <b>OptionsForm.cs </b>and add file browsing for adding a
+new sound or a new image.</li>
+<li><i><b>Build your card game</b>:<br>
+</i>Replace <b>BlackJackForm.cs</b> with another Windows Form
+that plays an entirely different game.&nbsp; Utilize the source
+code in the <b>CardGameFramework </b>folder to create new games
+such as Bridge or Poker.</li>
+<li><i><b>Add Network Play:</b></i><br>
+Extend the current game to include network multi-player functionality.</li>
+</ul>
+<p>&nbsp;</p>
+
+
+<h2><A href="#top"><IMG src="Images\topjump-vc.gif" border="0"></A>
+<a name="ForMoreInformation">For More Information</a>
+</h2>
+
+<h3>Online Resources</h3>
+
+<ul>
+<li>
+<a href="http://lab.msdn.microsoft.com/ProductFeedback/">Provide feedback on this documentation</a>
+</li>
+<li>
+<a href="http://msdn.microsoft.com/vcsharp/">Visual C# on MSDN</a>
+</li>
+</ul>
+
+<p>&nbsp;</p>
+
+
+<p>
+<a href="http://www.microsoft.com/info/copyright.mspx">
+© Microsoft Corporation and/or its suppliers. All rights reserved. Terms of Use.
+</a>
+</p>
+
+</div>
+
+</body>
+
+</html>

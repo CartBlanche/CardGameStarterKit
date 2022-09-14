@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BlackJack.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PlayerImage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\Images\Players\cat.jpg</Value>
+    </Setting>
+    <Setting Name="CardGameImagePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\..\Images\Cards\</Value>
+    </Setting>
+    <Setting Name="CardGameImageSkinPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\..\Images\Cards\cardSkin.png</Value>
+    </Setting>
+    <Setting Name="PlayerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Karen</Value>
+    </Setting>
+    <Setting Name="CardGameImageExtension" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.gif</Value>
+    </Setting>
+    <Setting Name="DefaultImage1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\..\Images\Players\cat.jpg</Value>
+    </Setting>
+    <Setting Name="InitBalance" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4000</Value>
+    </Setting>
+    <Setting Name="DefaultImage2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\..\Images\Players\dog.jpg</Value>
+    </Setting>
+    <Setting Name="DefaultImage3" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\..\Images\Players\rubberduck.jpg</Value>
+    </Setting>
+    <Setting Name="DefaultImage4" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\..\Images\Players\soccerball.jpg</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

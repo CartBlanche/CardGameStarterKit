@@ -1,0 +1,215 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2AEA8A08-5010-41C7-BF40-FF02D9261A4A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BlackJack</RootNamespace>
+    <AssemblyName>CardGame</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <StartupObject>
+    </StartupObject>
+    <ApplicationIcon>Resources\TemplateIcon.ico</ApplicationIcon>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/CardGame/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.*</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CardGameFramework\Card.cs" />
+    <Compile Include="BlackJackGame\BlackJackGame.cs" />
+    <Compile Include="OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsForm.designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="BlackJackGame\State.cs" />
+    <Compile Include="BlackJackGame\Player.cs" />
+    <Compile Include="CardGameFramework\Deck.cs" />
+    <Compile Include="CardGameFramework\Hand.cs" />
+    <Compile Include="StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BlackJackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlackJackForm.Designer.cs">
+      <DependentUpon>BlackJackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BlackJackForm.resx">
+      <DependentUpon>BlackJackForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documentation\CardGameStarterKit.htm" />
+    <Content Include="Documentation\Images\blackjack.JPG" />
+    <Content Include="Documentation\Images\side-vc.gif" />
+    <Content Include="Documentation\Images\topjump-vc.gif" />
+    <Content Include="Documentation\Images\top-vc.gif" />
+    <Content Include="EULA.txt" />
+    <Content Include="Images\Cards\cardSkin.PNG" />
+    <None Include="Properties\app.manifest" />
+    <Content Include="Images\Cards\cl1.gif" />
+    <Content Include="Images\Cards\cl10.gif" />
+    <Content Include="Images\Cards\cl2.gif" />
+    <Content Include="Images\Cards\cl3.gif" />
+    <Content Include="Images\Cards\cl4.gif" />
+    <Content Include="Images\Cards\cl5.gif" />
+    <Content Include="Images\Cards\cl6.gif" />
+    <Content Include="Images\Cards\cl7.gif" />
+    <Content Include="Images\Cards\cl8.gif" />
+    <Content Include="Images\Cards\cl9.gif" />
+    <Content Include="Images\Cards\clj.gif" />
+    <Content Include="Images\Cards\clk.gif" />
+    <Content Include="Images\Cards\clq.gif" />
+    <Content Include="Images\Cards\di1.gif" />
+    <Content Include="Images\Cards\di10.gif" />
+    <Content Include="Images\Cards\di2.gif" />
+    <Content Include="Images\Cards\di3.gif" />
+    <Content Include="Images\Cards\di4.gif" />
+    <Content Include="Images\Cards\di5.gif" />
+    <Content Include="Images\Cards\di6.gif" />
+    <Content Include="Images\Cards\di7.gif" />
+    <Content Include="Images\Cards\di8.gif" />
+    <Content Include="Images\Cards\di9.gif" />
+    <Content Include="Images\Cards\dij.gif" />
+    <Content Include="Images\Cards\dik.gif" />
+    <Content Include="Images\Cards\diq.gif" />
+    <Content Include="Images\Cards\he1.gif" />
+    <Content Include="Images\Cards\he10.gif" />
+    <Content Include="Images\Cards\he2.gif" />
+    <Content Include="Images\Cards\he3.gif" />
+    <Content Include="Images\Cards\he4.gif" />
+    <Content Include="Images\Cards\he5.gif" />
+    <Content Include="Images\Cards\he6.gif" />
+    <Content Include="Images\Cards\he7.gif" />
+    <Content Include="Images\Cards\he8.gif" />
+    <Content Include="Images\Cards\he9.gif" />
+    <Content Include="Images\Cards\hej.gif" />
+    <Content Include="Images\Cards\hek.gif" />
+    <Content Include="Images\Cards\heq.gif" />
+    <Content Include="Images\Cards\sp1.gif" />
+    <Content Include="Images\Cards\sp10.gif" />
+    <Content Include="Images\Cards\sp2.gif" />
+    <Content Include="Images\Cards\sp3.gif" />
+    <Content Include="Images\Cards\sp4.gif" />
+    <Content Include="Images\Cards\sp5.gif" />
+    <Content Include="Images\Cards\sp6.gif" />
+    <Content Include="Images\Cards\sp7.gif" />
+    <Content Include="Images\Cards\sp8.gif" />
+    <Content Include="Images\Cards\sp9.gif" />
+    <Content Include="Images\Cards\spj.gif" />
+    <Content Include="Images\Cards\spk.gif" />
+    <Content Include="Images\Cards\spq.gif" />
+    <None Include="Resources\BorderPlaceYourBetBottom.gif" />
+    <None Include="Resources\BorderPlaceYourBetTop.gif" />
+    <None Include="Resources\Background.jpg" />
+    <None Include="Resources\backGreen.PNG" />
+    <None Include="Resources\ButtonRound.gif" />
+    <None Include="Resources\ButtonRoundRollOver.gif" />
+    <None Include="Resources\ButtonSquare.gif" />
+    <None Include="Resources\coin1.gif" />
+    <None Include="Resources\coin2.gif" />
+    <None Include="Resources\coin3.gif" />
+    <None Include="Resources\coin4.gif" />
+    <None Include="Resources\cardSkin.PNG" />
+    <None Include="Resources\FrameBlue.gif" />
+    <Content Include="Images\Players\cat.jpg" />
+    <Content Include="Images\Players\dog.jpg" />
+    <Content Include="Images\Players\rubberduck.jpg" />
+    <Content Include="Images\Players\soccerball.jpg" />
+    <None Include="Resources\TemplateIcon.ico" />
+    <None Include="Resources\FrameBrightRed.gif" />
+    <None Include="Resources\FrameOrange.gif" />
+    <None Include="Resources\FramePink.gif" />
+    <None Include="Resources\FrameRed.gif" />
+    <None Include="Resources\FrameTextField1.gif" />
+    <None Include="Resources\FrameTextField2.gif" />
+    <None Include="Resources\FrameTextField3.gif" />
+    <None Include="Resources\FrameTextField4.gif" />
+    <None Include="Resources\FrameTextField5.gif" />
+    <None Include="Resources\PlaceYourBetTextField.gif" />
+    <None Include="Resources\TextFieldTop.gif" />
+    <None Include="Resources\SplashPage.jpg" />
+    <None Include="Resources\StartMenuIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <InProject>False</InProject>
+      <ProductName>.NET Framework 2.0 Beta</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

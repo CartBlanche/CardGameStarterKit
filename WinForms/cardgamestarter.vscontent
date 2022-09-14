@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSContent xmlns="http://schemas.microsoft.com/developer/vscontent/2005">
+    <Content>
+        <FileName>CardGameStarterKit.zip</FileName>
+        <DisplayName>Card Game Starter Kit</DisplayName>
+        <FileContentType>VSTemplate</FileContentType>
+        <ContentVersion>1.0</ContentVersion>
+        <Description>Card Game Starter Kit</Description>
+        <Attributes>
+            <Attribute name="TemplateType" value="Project"></Attribute>
+            <Attribute name="ProjectType" value="Visual C#"></Attribute>
+	<Attribute name="ProjectSubType" value="Starter Kits"></Attribute>
+        </Attributes>
+    </Content>
+</VSContent>

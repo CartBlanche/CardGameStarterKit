@@ -1,0 +1,152 @@
+<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Card Game Starter Kit</Name>
+    <Description>Creates a project containing the card game starter kit</Description>
+    <Icon>__TemplateIcon.ico</Icon>
+    <PreviewImage>__TemplateIcon.jpg</PreviewImage>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>CardGame</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="CardGame.csproj" File="CardGame.csproj" ReplaceParameters="true">
+<ProjectItem ReplaceParameters="false" TargetFileName="EULA.txt">EULA.txt</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="app.config">app.config</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="BlackJackForm.cs">BlackJackForm.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="BlackJackForm.Designer.cs">BlackJackForm.Designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="BlackJackForm.resx">BlackJackForm.resx</ProjectItem>
+      <Folder Name="BlackJackGame">
+        <ProjectItem ReplaceParameters="false" TargetFileName="BlackJackGame.cs">BlackJackGame.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Player.cs">Player.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="State.cs">State.cs</ProjectItem>
+      </Folder>
+      <Folder Name="CardGameFramework">
+        <ProjectItem ReplaceParameters="false" TargetFileName="Card.cs">Card.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Deck.cs">Deck.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Hand.cs">Hand.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Documentation">
+        <ProjectItem OpenInWebBrowser="true" TargetFileName="CardGameStarterKit.htm">CardGameStarterKit.HTM</ProjectItem>
+        <Folder Name="Images">
+          <ProjectItem ReplaceParameters="false" TargetFileName="side-vc.gif">side-vc.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="top-vc.gif">top-vc.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="topjump-vc.gif">topjump-vc.gif</ProjectItem>
+		 <ProjectItem ReplaceParameters="false" TargetFileName="blackjack.JPG">blackjack.JPG</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Images">
+        <Folder Name="Cards">
+          <ProjectItem ReplaceParameters="false" TargetFileName="cardSkin.PNG">cardSkin.PNG</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="cl1.gif">cl1.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="cl10.gif">cl10.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="cl2.gif">cl2.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="cl3.gif">cl3.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="cl4.gif">cl4.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="cl5.gif">cl5.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="cl6.gif">cl6.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="cl7.gif">cl7.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="cl8.gif">cl8.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="cl9.gif">cl9.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="clj.gif">clj.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="clk.gif">clk.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="clq.gif">clq.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="di1.gif">di1.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="di10.gif">di10.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="di2.gif">di2.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="di3.gif">di3.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="di4.gif">di4.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="di5.gif">di5.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="di6.gif">di6.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="di7.gif">di7.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="di8.gif">di8.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="di9.gif">di9.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="dij.gif">dij.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="dik.gif">dik.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="diq.gif">diq.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="he1.gif">he1.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="he10.gif">he10.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="he2.gif">he2.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="he3.gif">he3.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="he4.gif">he4.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="he5.gif">he5.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="he6.gif">he6.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="he7.gif">he7.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="he8.gif">he8.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="he9.gif">he9.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="hej.gif">hej.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="hek.gif">hek.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="heq.gif">heq.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="sp1.gif">sp1.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="sp10.gif">sp10.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="sp2.gif">sp2.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="sp3.gif">sp3.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="sp4.gif">sp4.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="sp5.gif">sp5.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="sp6.gif">sp6.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="sp7.gif">sp7.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="sp8.gif">sp8.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="sp9.gif">sp9.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="spj.gif">spj.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="spk.gif">spk.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="spq.gif">spq.gif</ProjectItem>
+        </Folder>
+        <Folder Name="Players">
+          <ProjectItem ReplaceParameters="false" TargetFileName="cat.jpg">cat.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="dog.jpg">dog.jpg</ProjectItem>
+       <ProjectItem ReplaceParameters="false" TargetFileName="rubberduck.jpg">rubberduck.jpg</ProjectItem>
+			<ProjectItem ReplaceParameters="false" TargetFileName="soccerball.jpg">soccerball.jpg</ProjectItem>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="false" TargetFileName="OptionsForm.cs">OptionsForm.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="OptionsForm.designer.cs">OptionsForm.designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="OptionsForm.resx">OptionsForm.resx</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Program.cs">Program.cs</ProjectItem>
+      <Folder Name="Properties">
+        <ProjectItem ReplaceParameters="false" TargetFileName="app.manifest">app.manifest</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Resources.resx">Resources.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Resources.Designer.cs">Resources.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Settings.settings">Settings.settings</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Settings.Designer.cs">Settings.Designer.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Resources">
+        <ProjectItem ReplaceParameters="false" TargetFileName="backGreen.PNG">backGreen.PNG</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Background.jpg">Background.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="BorderPlaceYourBetBottom.gif">BorderPlaceYourBetBottom.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="BorderPlaceYourBetTop.gif">BorderPlaceYourBetTop.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ButtonRound.gif">ButtonRound.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ButtonRoundRollOver.gif">ButtonRoundRollOver.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="ButtonSquare.gif">ButtonSquare.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="cardSkin.PNG">cardSkin.PNG</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="coin1.gif">coin1.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="coin2.gif">coin2.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="coin3.gif">coin3.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="coin4.gif">coin4.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FrameBlue.gif">FrameBlue.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FrameBrightRed.gif">FrameBrightRed.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FrameOrange.gif">FrameOrange.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FramePink.gif">FramePink.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FrameRed.gif">FrameRed.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FrameTextField1.gif">FrameTextField1.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FrameTextField2.gif">FrameTextField2.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FrameTextField3.gif">FrameTextField3.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FrameTextField4.gif">FrameTextField4.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FrameTextField5.gif">FrameTextField5.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="PlaceYourBetTextField.gif">PlaceYourBetTextField.gif</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="SplashPage.jpg">SplashPage.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="StartMenuIcon.png">StartMenuIcon.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="TextFieldTop.gif">TextFieldTop.gif</ProjectItem>
+<ProjectItem ReplaceParameters="false" TargetFileName="TemplateIcon.ico">TemplateIcon.ico</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="false" TargetFileName="StartForm.cs">StartForm.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="StartForm.Designer.cs">StartForm.Designer.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="StartForm.resx">StartForm.resx</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
