@@ -2,23 +2,23 @@
 namespace CardGame.Views {
 	public partial class MainPage : ContentPage
 	{
-		int count = 0;
-
 		public MainPage()
 		{
 			InitializeComponent();
 		}
 
-		private void OnCounterClicked(object sender, EventArgs e)
+		private async void OnNewGameClicked(object sender, EventArgs e)
 		{
-			count++;
+			SemanticScreenReader.Announce(btnNewGame.Text);
 
-			if (count == 1)
-				CounterBtn.Text = $"Clicked {count} time";
-			else
-				CounterBtn.Text = $"Clicked {count} times";
+			await Shell.Current.GoToAsync("game");
+		}
 
-			SemanticScreenReader.Announce(CounterBtn.Text);
+		private async void OnSettingsClicked(object sender, EventArgs e)
+		{
+			SemanticScreenReader.Announce(btnSettings.Text);
+
+			await Shell.Current.GoToAsync("settings");
 		}
 	}
 }

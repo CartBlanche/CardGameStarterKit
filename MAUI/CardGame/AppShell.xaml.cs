@@ -1,9 +1,22 @@
-﻿namespace CardGame;
+﻿using CardGame.Views;
 
-public partial class AppShell : Shell
+namespace CardGame
 {
-	public AppShell()
+
+	public partial class AppShell : Shell
 	{
-		InitializeComponent();
+		public AppShell()
+		{
+			InitializeComponent();
+
+			RegisterRoutes();
+		}
+
+		private void RegisterRoutes()
+		{
+			Routing.RegisterRoute("main", typeof(MainPage));
+			Routing.RegisterRoute("game", typeof(GamePage));
+			Routing.RegisterRoute("settings", typeof(SettingsPage));
+		}
 	}
 }

@@ -35,7 +35,7 @@ public partial class App : MauiWinUIApplication
 		var windowId = Win32Interop.GetWindowIdFromWindow(windowHandle);
 
 		var appWindow = AppWindow.GetFromWindowId(windowId);
-		appWindow.Resize(new SizeInt32(634, 627));
+		appWindow.Resize(new SizeInt32(634, 580));
 	}
 }
 

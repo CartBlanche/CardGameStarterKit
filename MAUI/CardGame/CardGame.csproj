@@ -49,12 +49,98 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cardskin.png" Link="Resources\Images\Cards\cardskin.png" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl1.gif" Link="Resources\Images\Cards\cl1.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl10.gif" Link="Resources\Images\Cards\cl10.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl2.gif" Link="Resources\Images\Cards\cl2.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl3.gif" Link="Resources\Images\Cards\cl3.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl4.gif" Link="Resources\Images\Cards\cl4.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl5.gif" Link="Resources\Images\Cards\cl5.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl6.gif" Link="Resources\Images\Cards\cl6.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl7.gif" Link="Resources\Images\Cards\cl7.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl8.gif" Link="Resources\Images\Cards\cl8.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl9.gif" Link="Resources\Images\Cards\cl9.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\clj.gif" Link="Resources\Images\Cards\clj.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\clk.gif" Link="Resources\Images\Cards\clk.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\clq.gif" Link="Resources\Images\Cards\clq.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di1.gif" Link="Resources\Images\Cards\di1.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di10.gif" Link="Resources\Images\Cards\di10.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di2.gif" Link="Resources\Images\Cards\di2.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di3.gif" Link="Resources\Images\Cards\di3.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di4.gif" Link="Resources\Images\Cards\di4.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di5.gif" Link="Resources\Images\Cards\di5.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di6.gif" Link="Resources\Images\Cards\di6.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di7.gif" Link="Resources\Images\Cards\di7.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di8.gif" Link="Resources\Images\Cards\di8.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di9.gif" Link="Resources\Images\Cards\di9.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\dij.gif" Link="Resources\Images\Cards\dij.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\dik.gif" Link="Resources\Images\Cards\dik.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\diq.gif" Link="Resources\Images\Cards\diq.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he1.gif" Link="Resources\Images\Cards\he1.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he10.gif" Link="Resources\Images\Cards\he10.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he2.gif" Link="Resources\Images\Cards\he2.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he3.gif" Link="Resources\Images\Cards\he3.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he4.gif" Link="Resources\Images\Cards\he4.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he5.gif" Link="Resources\Images\Cards\he5.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he6.gif" Link="Resources\Images\Cards\he6.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he7.gif" Link="Resources\Images\Cards\he7.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he8.gif" Link="Resources\Images\Cards\he8.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he9.gif" Link="Resources\Images\Cards\he9.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\hej.gif" Link="Resources\Images\Cards\hej.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\hek.gif" Link="Resources\Images\Cards\hek.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\heq.gif" Link="Resources\Images\Cards\heq.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp1.gif" Link="Resources\Images\Cards\sp1.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp10.gif" Link="Resources\Images\Cards\sp10.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp2.gif" Link="Resources\Images\Cards\sp2.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp3.gif" Link="Resources\Images\Cards\sp3.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp4.gif" Link="Resources\Images\Cards\sp4.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp5.gif" Link="Resources\Images\Cards\sp5.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp6.gif" Link="Resources\Images\Cards\sp6.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp7.gif" Link="Resources\Images\Cards\sp7.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp8.gif" Link="Resources\Images\Cards\sp8.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp9.gif" Link="Resources\Images\Cards\sp9.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\spj.gif" Link="Resources\Images\Cards\spj.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\spk.gif" Link="Resources\Images\Cards\spk.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\spq.gif" Link="Resources\Images\Cards\spq.gif" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="..\..\WinForms\Images\Players\cat.jpg" Link="Resources\Images\Players\cat.jpg" />
+	  <MauiImage Include="..\..\WinForms\Images\Players\dog.jpg" Link="Resources\Images\Players\dog.jpg" />
+	  <MauiImage Include="..\..\WinForms\Images\Players\rubberduck.jpg" Link="Resources\Images\Players\rubberduck.jpg" />
+	  <MauiImage Include="..\..\WinForms\Images\Players\soccerball.jpg" Link="Resources\Images\Players\soccerball.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiImage Include="..\..\WinForms\Resources\splashpage.jpg" Link="Resources\Images\splashpage.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiImage Include="..\..\WinForms\Resources\backgreen.png" Link="Resources\Images\backgreen.png" />
 	  <MauiImage Include="..\..\WinForms\Resources\background.jpg" Link="Resources\Images\background.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Views\GamePage.xaml.cs">
+	    <DependentUpon>GamePage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\SettingsPage.xaml.cs">
+	    <DependentUpon>SettingsPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\GamePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SettingsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Resources\Images\Cards\" />
+	  <Folder Include="Resources\Images\Players\" />
 	</ItemGroup>
 
 </Project>
