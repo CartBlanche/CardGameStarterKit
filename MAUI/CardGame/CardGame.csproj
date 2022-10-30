@@ -48,4 +48,13 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiImage Include="..\..\WinForms\Resources\splashpage.jpg" Link="Resources\Images\splashpage.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="..\..\WinForms\Resources\backgreen.png" Link="Resources\Images\backgreen.png" />
+	  <MauiImage Include="..\..\WinForms\Resources\background.jpg" Link="Resources\Images\background.jpg" />
+	</ItemGroup>
+
 </Project>
