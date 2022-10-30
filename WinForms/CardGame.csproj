@@ -201,7 +201,7 @@
     <None Include="Resources\FrameTextField5.gif" />
     <None Include="Resources\PlaceYourBetTextField.gif" />
     <None Include="Resources\TextFieldTop.gif" />
-    <None Include="Resources\SplashPage.jpg" />
+    <None Include="Resources\splashpage.jpg" />
     <None Include="Resources\StartMenuIcon.png" />
   </ItemGroup>
   <ItemGroup>
