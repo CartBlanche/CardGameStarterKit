@@ -118,8 +118,8 @@ jobs:
       env:
         DevEnvDir: 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE'
 
-    - name: Publish Windows App
-      run: dotnet publish -c Release WinForms\CardGame.sln /p:DefineConstants=WINDOWS
+    #- name: Publish Windows App
+    #  run: dotnet publish -c Release WinForms\CardGame.sln /p:DefineConstants=WINDOWS
 
     - name: Upload Windows Artifacts
       uses: actions/upload-artifact@v2
