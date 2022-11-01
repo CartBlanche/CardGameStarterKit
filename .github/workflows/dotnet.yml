@@ -107,11 +107,16 @@ jobs:
       with:
         dotnet-version: 6.0.x
 
+    - name: Add MSBuild to Path
+      uses: microsoft/setup-msbuild@v1.1
+
     - name: Restore dependencies
-      run: msbuild -t:restore WinForms\CardGame.sln
+      run: msbuild WinForms\CardGame.sln /t:Restore /p:Configuration=Release
 
     - name: Build
-      run: msbuild -t:build -c Release WinForms\CardGame.sln /p:DefineConstants=WINDOWS
+      run: msbuild WinForms\CardGame.sln /t:Rebuild /p:Configuration=Release
+      env:
+        DevEnvDir: 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE'
 
     - name: Publish Windows App
       run: dotnet publish -c Release WinForms\CardGame.sln /p:DefineConstants=WINDOWS
