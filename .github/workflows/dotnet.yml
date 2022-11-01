@@ -1,0 +1,124 @@
+name: Build CardGame Framework
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-MAUI-vsmac:
+
+    runs-on: macos-12
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Install .NET MAUI
+      run: dotnet workload install maui
+
+    - name: Restore dependencies
+      run: dotnet restore MAUI/CardGame.sln
+
+    - name: Build
+      run: dotnet build -c Release MAUI/CardGame.sln
+
+    - name: Publish MacOS App
+      run: dotnet publish -c Release -f net6.0-maccatalyst MAUI\CardGame\CardGame.csproj
+
+    - name: Upload Mac Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: CardGame-Mac
+        path: 'bin/Release/net6.0-maccatalyst/**/publish/*.pkg'
+
+    - name: Publish Android App
+      run: dotnet publish -c Release -f net6.0-android MAUI\CardGame\CardGame.csproj
+
+    - name: Upload Android Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: CardGame-Android
+        path: |
+          'bin/Release/net6.0-android/**/*.apk'
+          'bin/Release/net6.0-android/**/*.aab'
+
+    # COMMENTED OUT until we get code-signing set up.
+    #- name: Publish iOS App
+    #  run: dotnet publish -c Release -f net6.0-ios -r ios-arm64 MAUI\CardGame\CardGame.csproj
+
+    - name: Upload iOS Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: CardGame-iOS
+        path: 'bin/Relase/net6.0-ios/**/publish/*.app'
+
+  build-MAUI-vswin:
+
+    runs-on: windows-2022
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Install .NET MAUI
+      run: dotnet workload install maui
+
+    - name: Restore dependencies
+      run: dotnet restore MAUI\CardGame\CardGame.csproj
+
+    - name: Build
+      run: dotnet build -c Release -f net6.0-windows10.0.19041.0 MAUI\CardGame\CardGame.csproj /p:DefineConstants=WINDOWS
+
+    - name: Publish Windows App
+      run: dotnet publish -c Release -f net6.0-windows10.0.19041.0 MAUI\CardGame\CardGame.csproj /p:DefineConstants=WINDOWS
+
+    - name: Upload Windows Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: CardGame-MAUI-Win
+        path: |
+          'bin\Release\**\*.msix'
+          'bin\Release\**\*.appxbundle'
+          'bin\Release\**\*.cer'
+          'install.bat'
+
+    # - name: Test
+    #  run: dotnet test --no-build --verbosity normal restore MAUI\CardGame\CardGame.sln
+
+  build-WinForms-vswin:
+
+    runs-on: windows-2022
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore WinForms\CardGame\CardGame.sln
+
+    - name: Build
+      run: dotnet build -c Release WinForms\CardGame\CardGame.sln /p:DefineConstants=WINDOWS
+
+    - name: Publish Windows App
+      run: dotnet publish -c Release WinForms\CardGame\CardGame.sln /p:DefineConstants=WINDOWS
+
+    - name: Upload Windows Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: CardGame-WinFroms-Win
+        path: |
+          'bin\Release\**\*.exe'
