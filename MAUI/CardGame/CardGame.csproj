@@ -49,6 +49,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Include="..\..\WinForms\BlackJackGame\BlackJackGame.cs" Link="BlackJackGame\BlackJackGame.cs" />
+	  <Compile Include="..\..\WinForms\BlackJackGame\Player.cs" Link="BlackJackGame\Player.cs" />
+	  <Compile Include="..\..\WinForms\BlackJackGame\State.cs" Link="BlackJackGame\State.cs" />
+	  <Compile Include="..\..\WinForms\Framework\Card.cs" Link="Framwork\Card.cs" />
+	  <Compile Include="..\..\WinForms\Framework\Deck.cs" Link="Framwork\Deck.cs" />
+	  <Compile Include="..\..\WinForms\Framework\Hand.cs" Link="Framwork\Hand.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="..\..\WinForms\Resources\coin1.gif" Link="Resources\Images\coin1.gif" />
+	  <MauiImage Include="..\..\WinForms\Resources\coin2.gif" Link="Resources\Images\coin2.gif" />
+	  <MauiImage Include="..\..\WinForms\Resources\coin3.gif" Link="Resources\Images\coin3.gif" />
+	  <MauiImage Include="..\..\WinForms\Resources\coin4.gif" Link="Resources\Images\coin4.gif" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiImage Include="..\..\WinForms\Images\Cards\cardskin.png" Link="Resources\Images\Cards\cardskin.png" />
 	  <MauiImage Include="..\..\WinForms\Images\Cards\cl1.gif" Link="Resources\Images\Cards\cl1.gif" />
 	  <MauiImage Include="..\..\WinForms\Images\Cards\cl10.gif" Link="Resources\Images\Cards\cl10.gif" />
@@ -139,6 +155,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="BlackJackGame\" />
+	  <Folder Include="Framwork\" />
 	  <Folder Include="Resources\Images\Cards\" />
 	  <Folder Include="Resources\Images\Players\" />
 	</ItemGroup>

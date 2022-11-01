@@ -14,6 +14,10 @@ public partial class SettingsPage : ContentPage
 
 	static string playerImage = "cat.jpg";
 	public static string PlayerImage { get { return playerImage; } set { playerImage = value; } }
+
+	static int playerInitialBalance = 4000;
+	public static int PlayerInitialBalance { get { return playerInitialBalance; } set { playerInitialBalance = value; } }
+
 	public SettingsPage()
 	{
 		InitializeComponent();
