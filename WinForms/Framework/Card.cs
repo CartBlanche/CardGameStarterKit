@@ -1,5 +1,5 @@
 ﻿
-namespace BlackJack.CardGameFramework
+namespace CardGame.Framework
 {
     /// <summary>
     /// Card suit values

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using BlackJack.CardGameFramework;
+using CardGame.Framework;
 
 namespace BlackJack
 {
@@ -29,11 +29,11 @@ namespace BlackJack
         /// Main Constructor for BlackJack Game
         /// </summary>
         /// <param name="initBalance"></param>
-		public BlackJackGame(int initBalance)
+		public BlackJackGame(int initBalance, string playerImage, string playerName)
 		{
 			// Create a dealer and one player with the initial balance.
 			dealer = new Player();
-            player = new Player(initBalance) ;
+            player = new Player(initBalance, playerImage, playerName);
 		}
 
 		#endregion

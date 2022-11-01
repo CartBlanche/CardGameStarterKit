@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
-using BlackJack.CardGameFramework;
-using System.Windows.Forms;
+using CardGame.Framework;
 using System;
 
 namespace BlackJack
@@ -39,11 +38,11 @@ namespace BlackJack
         ///  Creates a player with a new hand and new balance
         /// </summary>
         /// <param name="newBalance"></param>
-        public Player(int newBalance)
+        public Player(int newBalance, string playerImage = "", string playerName = "")
         {
             // Sets the player's image and name that is displayed in the picture frame in the UI.
-            this.image = Properties.Settings.Default.PlayerImage;
-            this.name = Properties.Settings.Default.PlayerName;
+            this.image = playerImage;
+            this.name = playerName;
             this.hand = new BlackJackHand();
             this.balance = newBalance;
         }

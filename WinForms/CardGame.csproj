@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CardGameFramework\Card.cs" />
+    <Compile Include="Framework\Card.cs" />
     <Compile Include="BlackJackGame\BlackJackGame.cs" />
     <Compile Include="OptionsForm.cs">
       <SubType>Form</SubType>
@@ -71,8 +71,8 @@
     </Compile>
     <Compile Include="BlackJackGame\State.cs" />
     <Compile Include="BlackJackGame\Player.cs" />
-    <Compile Include="CardGameFramework\Deck.cs" />
-    <Compile Include="CardGameFramework\Hand.cs" />
+    <Compile Include="Framework\Deck.cs" />
+    <Compile Include="Framework\Hand.cs" />
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
