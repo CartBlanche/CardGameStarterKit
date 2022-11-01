@@ -29,7 +29,7 @@ jobs:
       run: dotnet build -c Release MAUI/CardGame.sln
 
     - name: Publish MacOS App
-      run: dotnet publish -c Release -f net6.0-maccatalyst MAUI\CardGame\CardGame.csproj
+      run: dotnet publish -c Release -f net6.0-maccatalyst MAUI/CardGame/CardGame.csproj
 
     - name: Upload Mac Artifacts
       uses: actions/upload-artifact@v2
@@ -38,7 +38,7 @@ jobs:
         path: 'bin/Release/net6.0-maccatalyst/**/publish/*.pkg'
 
     - name: Publish Android App
-      run: dotnet publish -c Release -f net6.0-android MAUI\CardGame\CardGame.csproj
+      run: dotnet publish -c Release -f net6.0-android MAUI/CardGame/CardGame.csproj
 
     - name: Upload Android Artifacts
       uses: actions/upload-artifact@v2
@@ -50,7 +50,7 @@ jobs:
 
     # COMMENTED OUT until we get code-signing set up.
     #- name: Publish iOS App
-    #  run: dotnet publish -c Release -f net6.0-ios -r ios-arm64 MAUI\CardGame\CardGame.csproj
+    #  run: dotnet publish -c Release -f net6.0-ios -r ios-arm64 MAUI/CardGame/CardGame.csproj
 
     - name: Upload iOS Artifacts
       uses: actions/upload-artifact@v2
@@ -74,13 +74,13 @@ jobs:
       run: dotnet workload install maui
 
     - name: Restore dependencies
-      run: dotnet restore MAUI\CardGame\CardGame.csproj
+      run: dotnet restore MAUI/CardGame/CardGame.csproj
 
     - name: Build
-      run: dotnet build -c Release -f net6.0-windows10.0.19041.0 MAUI\CardGame\CardGame.csproj /p:DefineConstants=WINDOWS
+      run: dotnet build -c Release -f net6.0-windows10.0.19041.0 MAUI/CardGame/CardGame.csproj /p:DefineConstants=WINDOWS
 
     - name: Publish Windows App
-      run: dotnet publish -c Release -f net6.0-windows10.0.19041.0 MAUI\CardGame\CardGame.csproj /p:DefineConstants=WINDOWS
+      run: dotnet publish -c Release -f net6.0-windows10.0.19041.0 MAUI/CardGame/CardGame.csproj /p:DefineConstants=WINDOWS
 
     - name: Upload Windows Artifacts
       uses: actions/upload-artifact@v2
@@ -108,10 +108,10 @@ jobs:
         dotnet-version: 6.0.x
 
     - name: Restore dependencies
-      run: dotnet restore WinForms\CardGame.sln
+      run: msbuild -t:restore WinForms\CardGame.sln
 
     - name: Build
-      run: dotnet build -c Release WinForms\CardGame.sln /p:DefineConstants=WINDOWS
+      run: msbuild -t:build -c Release WinForms\CardGame.sln /p:DefineConstants=WINDOWS
 
     - name: Publish Windows App
       run: dotnet publish -c Release WinForms\CardGame.sln /p:DefineConstants=WINDOWS
