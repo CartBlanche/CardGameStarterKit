@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CardGame.Views.GamePage">
+             x:Class="CardGame.Views.GamePage"
+			 Title="{Binding Title}">
 	<Grid ColumnSpacing="2"
 		  RowSpacing="2">
 		<Image Source="background.jpg"
@@ -59,8 +60,8 @@
 		</HorizontalStackLayout>
 		<HorizontalStackLayout HorizontalOptions="Center"
 							   VerticalOptions="Start"
-							   Spacing="250"
-							   Padding="0,85">
+							   Spacing="55"
+							   Padding="0,75">
 			<Grid HorizontalOptions="Start"
 				  VerticalOptions="Center">
 				<Grid.RowDefinitions>
@@ -114,6 +115,15 @@
 					   HorizontalOptions="Center"
 					   VerticalOptions="Center"/>
 			</Grid>
+			<Label x:Name="lblGameOver"
+				   Text="GAME OVER"
+				   TextColor="Yellow"
+				   FontSize="Large"
+				   HorizontalOptions="End"
+				   VerticalOptions="Center" 
+				   IsVisible="true"
+				   Opacity="0"
+				   />
 			<Grid HorizontalOptions="End"
 				  VerticalOptions="Center"
 				  >
@@ -147,89 +157,86 @@
 					   VerticalOptions="Center"/>
 			</Grid>
 		</HorizontalStackLayout>
-		<HorizontalStackLayout 
-			HorizontalOptions="Center"
-			VerticalOptions="Center">
-			<Grid HorizontalOptions="Start"
-				  VerticalOptions="Center">
-				<Grid.RowDefinitions>
-					<RowDefinition Height="*" />
-				</Grid.RowDefinitions>
-				<Image x:Name="playerCard1"
-					   Grid.Row="0"
-					   Source="cl1.gif"
-					   WidthRequest="60"
-					   HeightRequest="80"
-					   HorizontalOptions="Center" 
-					   VerticalOptions="Center"/>
-				<Image x:Name="playerCard2"
-					   Grid.Row="0"
-					   TranslationX="25"
-					   Source="cl2.gif"
-					   WidthRequest="60"
-					   HeightRequest="80"
-					   HorizontalOptions="Center" 
-					   VerticalOptions="Center"/>
-				<Image x:Name="playerCard3"
-					   Grid.Row="0"
-					   TranslationX="50"
-					   Source="cl3.gif"
-					   WidthRequest="60"
-					   HeightRequest="80"
-					   HorizontalOptions="Center"
-					   VerticalOptions="Center"/>
-				<Image x:Name="playerCard4"
-					   Grid.Row="0"
-					   TranslationX="75"
-					   Source="cl4.gif"
-					   WidthRequest="60"
-					   HeightRequest="80"
-					   HorizontalOptions="Center" 
-					   VerticalOptions="Center"/>
-				<Image x:Name="playerCard5"
-					   Grid.Row="0"
-					   TranslationX="100"
-					   Source="cl5.gif"
-					   WidthRequest="60"
-					   HeightRequest="80"
-					   HorizontalOptions="Center" 
-					   VerticalOptions="Center"/>
-				<Image x:Name="playerCard6"
-					   Grid.Row="0"
-					   TranslationX="125"
-					   Source="cl6.gif"
-					   WidthRequest="60"
-					   HeightRequest="80"
-					   HorizontalOptions="Center"
-					   VerticalOptions="Center"/>
-			</Grid>
-		</HorizontalStackLayout>
 
 		<VerticalStackLayout Padding="0,110" 
 							 HorizontalOptions="Center" 
 							 VerticalOptions="End">
-			<Label x:Name="lblPlayerTotal" 
-				   TextColor="White"
-				   HorizontalOptions="Center"
-				   VerticalOptions="Center" />
 			<Image x:Name="imgPlayerPicture"
 				   Aspect="AspectFit"
 				   WidthRequest="80"
 				   HeightRequest="80"
 				   HorizontalOptions="Center" 
 				   VerticalOptions="Center"/>
-			<HorizontalStackLayout>
+			<HorizontalStackLayout Spacing="20">
 				<Label x:Name="lblPlayerName" 
 					   TextColor="White"
+					   FontAttributes="Bold"
 					   HorizontalOptions="Center"
 					   VerticalOptions="Center" />
-				<Label x:Name="lblGameOver"
-					   Text="GAME OVER"
-					   TextColor="Yellow"
-					   FontSize="Large"
-					   HorizontalOptions="End"
-					   VerticalOptions="Center" />
+				<HorizontalStackLayout 
+					HorizontalOptions="Center"
+					VerticalOptions="Center">
+					<Grid HorizontalOptions="Start"
+						  VerticalOptions="Center">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*" />
+						</Grid.RowDefinitions>
+						<Image x:Name="playerCard1"
+							   Grid.Row="0"
+							   Source="cl1.gif"
+							   WidthRequest="60"
+							   HeightRequest="80"
+							   HorizontalOptions="Center" 
+							   VerticalOptions="Center"/>
+						<Image x:Name="playerCard2"
+							   Grid.Row="0"
+							   TranslationX="25"
+							   Source="cl2.gif"
+							   WidthRequest="60"
+							   HeightRequest="80"
+							   HorizontalOptions="Center" 
+							   VerticalOptions="Center"/>
+						<Image x:Name="playerCard3"
+							   Grid.Row="0"
+							   TranslationX="50"
+							   Source="cl3.gif"
+							   WidthRequest="60"
+							   HeightRequest="80"
+							   HorizontalOptions="Center"
+							   VerticalOptions="Center"/>
+						<Image x:Name="playerCard4"
+							   Grid.Row="0"
+							   TranslationX="75"
+							   Source="cl4.gif"
+							   WidthRequest="60"
+							   HeightRequest="80"
+							   HorizontalOptions="Center" 
+							   VerticalOptions="Center"/>
+						<Image x:Name="playerCard5"
+							   Grid.Row="0"
+							   TranslationX="100"
+							   Source="cl5.gif"
+							   WidthRequest="60"
+							   HeightRequest="80"
+							   HorizontalOptions="Center" 
+							   VerticalOptions="Center"/>
+						<Image x:Name="playerCard6"
+							   Grid.Row="0"
+							   TranslationX="125"
+							   Source="cl6.gif"
+							   WidthRequest="60"
+							   HeightRequest="80"
+							   HorizontalOptions="Center"
+							   VerticalOptions="Center"/>
+					</Grid>
+
+				</HorizontalStackLayout>
 			</HorizontalStackLayout>
+			<Label x:Name="lblPlayerTotal"
+					   TextColor="White"
+					   Text="{Binding PlayerTotal}"
+					   HorizontalOptions="End"
+					   VerticalOptions="End" />
 		</VerticalStackLayout>
 
 		<VerticalStackLayout VerticalOptions="End">
@@ -330,7 +337,7 @@
 						WidthRequest="80"
 						Clicked="btnClear_Clicked"/>
 			</HorizontalStackLayout>
-			<HorizontalStackLayout Spacing="10" Padding="0,0,0,12" HorizontalOptions="Center" VerticalOptions="End">
+			<HorizontalStackLayout Spacing="10" HorizontalOptions="Center" VerticalOptions="End">
 				<Button x:Name="btnDoubleDown" 
 						Text="Double Down" 
 						WidthRequest="80"

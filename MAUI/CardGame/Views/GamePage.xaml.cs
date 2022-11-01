@@ -1,5 +1,6 @@
 using BlackJack;
 using CardGame.Framework;
+using CardGame.ViewModels;
 using Microsoft.Maui;
 
 namespace CardGame.Views;
@@ -10,16 +11,12 @@ public partial class GamePage : ContentPage
 		SettingsPage.PlayerImage, 
 		SettingsPage.PlayerName);
 
+	private GameViewModel gameViewModel = new GameViewModel ();
+
 	private Image[] playerCards;
 	private Image[] dealerCards;
 	private bool firstTurn;
 
-
-	public int MyAccount { get; set; }
-	public int MyBet { get; set; }
-	public int Wins { get; set; }
-	public int Losses { get; set; }
-	public int Ties { get; set; }
 	public GamePage()
 	{
 		InitializeComponent();
@@ -28,7 +25,7 @@ public partial class GamePage : ContentPage
 
 		SetUpNewGame();
 
-		BindingContext = this;
+		BindingContext = gameViewModel;
 	}
 
 	private void SetUpNewGame()
@@ -46,7 +43,7 @@ public partial class GamePage : ContentPage
 
 		imgPlayerPicture.Source = game.CurrentPlayer.Image;
 		lblPlayerName.Text = game.CurrentPlayer.Name;
-		lblGameOver.IsVisible = false;
+		lblGameOver.Opacity = 0; // Invisible
 		lblPlayerTotal.IsVisible = false;
 
 		firstTurn = true;
@@ -56,8 +53,8 @@ public partial class GamePage : ContentPage
 
 	private void ShowBankValue()
 	{
-		MyAccount = (int)game.CurrentPlayer.Balance;
-		MyBet = (int)game.CurrentPlayer.Bet;
+		gameViewModel.MyAccount = (int)game.CurrentPlayer.Balance;
+		gameViewModel.MyBet = (int)game.CurrentPlayer.Bet;
 	}
 
 	private void LoadCardSkinImages()
@@ -212,12 +209,12 @@ public partial class GamePage : ContentPage
 		}
 
 		// Update the "My Record" values
-		Wins = game.CurrentPlayer.Wins;
-		Losses = game.CurrentPlayer.Losses;
-		Ties = game.CurrentPlayer.Push;
+		gameViewModel.Wins = game.CurrentPlayer.Wins;
+		gameViewModel.Losses = game.CurrentPlayer.Losses;
+		gameViewModel.Ties = game.CurrentPlayer.Push;
 		SetUpNewGame();
 		ShowBankValue();
-		lblGameOver.IsVisible = true;
+		lblGameOver.Opacity = 100; //Visible
 
 		// Check if the current player is out of money
 		if (game.CurrentPlayer.Balance == 0)
@@ -230,7 +227,7 @@ public partial class GamePage : ContentPage
 	private void UpdateUIPlayerCards()
 	{
 		// Update the value of the hand
-		lblPlayerTotal.Text = game.CurrentPlayer.Hand.GetSumOfHand().ToString();
+		gameViewModel.PlayerTotal = game.CurrentPlayer.Hand.GetSumOfHand();
 
 		List<Card> pcards = game.CurrentPlayer.Hand.Cards;
 		for (int i = 0; i < pcards.Count; i++)
@@ -343,7 +340,7 @@ public partial class GamePage : ContentPage
 		if (firstTurn)
 			btnDoubleDown.IsEnabled = true;
 
-		lblGameOver.IsVisible = false;
+		lblGameOver.Opacity = 0; // Invisible
 		lblPlayerTotal.IsVisible = true;
 	}
 
