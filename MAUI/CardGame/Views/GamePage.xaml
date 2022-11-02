@@ -161,12 +161,23 @@
 		<VerticalStackLayout Padding="0,110" 
 							 HorizontalOptions="Center" 
 							 VerticalOptions="End">
-			<Image x:Name="imgPlayerPicture"
-				   Aspect="AspectFit"
-				   WidthRequest="80"
-				   HeightRequest="80"
-				   HorizontalOptions="Center" 
-				   VerticalOptions="Center"/>
+			<Border WidthRequest="82"
+					HeightRequest="82"
+					Stroke="Blue"
+					StrokeThickness="3"
+					StrokeShape="RoundRectange 50">
+				<Border.Shadow>
+					<Shadow Brush="Black"
+							Offset="10,10"
+							Opacity="0.8" />
+				</Border.Shadow>
+				<Image x:Name="imgPlayerPicture"
+					   Aspect="AspectFit"
+					   WidthRequest="80"
+					   HeightRequest="80"
+					   HorizontalOptions="Center" 
+					   VerticalOptions="Center"/>
+			</Border>
 			<HorizontalStackLayout Spacing="20">
 				<Label x:Name="lblPlayerName" 
 					   TextColor="White"
