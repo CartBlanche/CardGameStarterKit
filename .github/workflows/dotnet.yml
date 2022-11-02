@@ -35,7 +35,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: CardGame-Mac
-        path: 'MAUI/CardGame/bin/Release/net6.0-maccatalyst/maccatalyst-x64/publish/*.pkg'
+        path: 'CardGameStarterKit/MAUI/CardGame/bin/Release/net6.0-maccatalyst/maccatalyst-x64/publish/*.pkg'
 
     - name: Publish Android App
       run: dotnet publish -c Release -f net6.0-android MAUI/CardGame/CardGame.csproj
@@ -45,8 +45,8 @@ jobs:
       with:
         name: CardGame-Android
         path: |
-          'MAUI/CardGame/bin/Release/net6.0-android/**/*.apk'
-          'MAUI/CardGame/bin/Release/net6.0-android/**/*.aab'
+          'CardGameStarterKit/MAUI/CardGame/bin/Release/net6.0-android/**/*.apk'
+          'CardGameStarterKit/MAUI/CardGame/bin/Release/net6.0-android/**/*.aab'
 
     # COMMENTED OUT until we get code-signing set up.
     #- name: Publish iOS App
@@ -56,7 +56,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: CardGame-iOS
-        path: 'bin/Relase/net6.0-ios/**/publish/*.app'
+        path: 'CardGameStarterKit/bin/Relase/net6.0-ios/**/publish/*.app'
 
   build-MAUI-vswin:
 
@@ -87,7 +87,7 @@ jobs:
       with:
         name: CardGame-MAUI-Win
         path: |
-          'MAUI\CardGame\bin\Release\net6.0-windows10.0.19041.0\win10-x64\AppPackages\CardGame_1.0.0.1_Test\*.msix'
+          'CardGameStarterKit\MAUI\CardGame\bin\Release\net6.0-windows10.0.19041.0\win10-x64\AppPackages\CardGame_1.0.0.1_Test\*.msix'
           'bin\Release\**\*.appxbundle'
           'bin\Release\**\*.cer'
           'install.bat'
@@ -126,4 +126,4 @@ jobs:
       with:
         name: CardGame-WinFroms-Win
         path: |
-          'WinForms\bin\Release\*.exe'
+          'CardGameStarterKit\WinForms\bin\Release\*.exe'
