@@ -126,4 +126,4 @@ jobs:
       with:
         name: CardGame-WinFroms-Win
         path: |
-          'CardGameStarterKit\WinForms\bin\Release\*.exe'
+          'WinForms\bin\Release\*.exe'
