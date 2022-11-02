@@ -87,7 +87,7 @@ jobs:
       with:
         name: CardGame-MAUI-Win
         path: |
-          'CardGameStarterKit\MAUI\CardGame\bin\Release\net6.0-windows10.0.19041.0\win10-x64\AppPackages\CardGame_1.0.0.1_Test\*.msix'
+          'MAUI\CardGame\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppPackages\CardGame_1.0.0.1_Test\*.msix'
           'bin\Release\**\*.appxbundle'
           'bin\Release\**\*.cer'
           'install.bat'
