@@ -32,7 +32,6 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
@@ -55,6 +54,10 @@
 	  <Compile Include="..\..\WinForms\Framework\Card.cs" Link="Framwork\Card.cs" />
 	  <Compile Include="..\..\WinForms\Framework\Deck.cs" Link="Framwork\Deck.cs" />
 	  <Compile Include="..\..\WinForms\Framework\Hand.cs" Link="Framwork\Hand.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiIcon Include="..\..\WinForms\Resources\startmenuicon.png" Link="Resources\AppIcon\appicon.png" />
 	</ItemGroup>
 
 	<ItemGroup>
