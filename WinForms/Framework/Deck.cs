@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BlackJack.CardGameFramework
+namespace CardGame.Framework
 {
     public class Deck
     {

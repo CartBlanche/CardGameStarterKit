@@ -1,0 +1,167 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
+		<OutputType>Exe</OutputType>
+		<RootNamespace>CardGame</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Display name -->
+		<ApplicationTitle>CardGame</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.cardgame</ApplicationId>
+		<ApplicationIdGuid>753DA00E-7D0F-41B5-890A-E3664E3BA41E</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Include="..\..\WinForms\BlackJackGame\BlackJackGame.cs" Link="BlackJackGame\BlackJackGame.cs" />
+	  <Compile Include="..\..\WinForms\BlackJackGame\Player.cs" Link="BlackJackGame\Player.cs" />
+	  <Compile Include="..\..\WinForms\BlackJackGame\State.cs" Link="BlackJackGame\State.cs" />
+	  <Compile Include="..\..\WinForms\Framework\Card.cs" Link="Framwork\Card.cs" />
+	  <Compile Include="..\..\WinForms\Framework\Deck.cs" Link="Framwork\Deck.cs" />
+	  <Compile Include="..\..\WinForms\Framework\Hand.cs" Link="Framwork\Hand.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiIcon Include="..\..\WinForms\Resources\startmenuicon.png" Link="Resources\AppIcon\appicon.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="..\..\WinForms\Resources\coin1.gif" Link="Resources\Images\coin1.gif" />
+	  <MauiImage Include="..\..\WinForms\Resources\coin2.gif" Link="Resources\Images\coin2.gif" />
+	  <MauiImage Include="..\..\WinForms\Resources\coin3.gif" Link="Resources\Images\coin3.gif" />
+	  <MauiImage Include="..\..\WinForms\Resources\coin4.gif" Link="Resources\Images\coin4.gif" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cardskin.png" Link="Resources\Images\Cards\cardskin.png" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl1.gif" Link="Resources\Images\Cards\cl1.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl10.gif" Link="Resources\Images\Cards\cl10.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl2.gif" Link="Resources\Images\Cards\cl2.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl3.gif" Link="Resources\Images\Cards\cl3.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl4.gif" Link="Resources\Images\Cards\cl4.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl5.gif" Link="Resources\Images\Cards\cl5.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl6.gif" Link="Resources\Images\Cards\cl6.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl7.gif" Link="Resources\Images\Cards\cl7.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl8.gif" Link="Resources\Images\Cards\cl8.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\cl9.gif" Link="Resources\Images\Cards\cl9.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\clj.gif" Link="Resources\Images\Cards\clj.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\clk.gif" Link="Resources\Images\Cards\clk.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\clq.gif" Link="Resources\Images\Cards\clq.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di1.gif" Link="Resources\Images\Cards\di1.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di10.gif" Link="Resources\Images\Cards\di10.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di2.gif" Link="Resources\Images\Cards\di2.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di3.gif" Link="Resources\Images\Cards\di3.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di4.gif" Link="Resources\Images\Cards\di4.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di5.gif" Link="Resources\Images\Cards\di5.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di6.gif" Link="Resources\Images\Cards\di6.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di7.gif" Link="Resources\Images\Cards\di7.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di8.gif" Link="Resources\Images\Cards\di8.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\di9.gif" Link="Resources\Images\Cards\di9.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\dij.gif" Link="Resources\Images\Cards\dij.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\dik.gif" Link="Resources\Images\Cards\dik.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\diq.gif" Link="Resources\Images\Cards\diq.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he1.gif" Link="Resources\Images\Cards\he1.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he10.gif" Link="Resources\Images\Cards\he10.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he2.gif" Link="Resources\Images\Cards\he2.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he3.gif" Link="Resources\Images\Cards\he3.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he4.gif" Link="Resources\Images\Cards\he4.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he5.gif" Link="Resources\Images\Cards\he5.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he6.gif" Link="Resources\Images\Cards\he6.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he7.gif" Link="Resources\Images\Cards\he7.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he8.gif" Link="Resources\Images\Cards\he8.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\he9.gif" Link="Resources\Images\Cards\he9.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\hej.gif" Link="Resources\Images\Cards\hej.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\hek.gif" Link="Resources\Images\Cards\hek.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\heq.gif" Link="Resources\Images\Cards\heq.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp1.gif" Link="Resources\Images\Cards\sp1.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp10.gif" Link="Resources\Images\Cards\sp10.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp2.gif" Link="Resources\Images\Cards\sp2.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp3.gif" Link="Resources\Images\Cards\sp3.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp4.gif" Link="Resources\Images\Cards\sp4.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp5.gif" Link="Resources\Images\Cards\sp5.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp6.gif" Link="Resources\Images\Cards\sp6.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp7.gif" Link="Resources\Images\Cards\sp7.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp8.gif" Link="Resources\Images\Cards\sp8.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\sp9.gif" Link="Resources\Images\Cards\sp9.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\spj.gif" Link="Resources\Images\Cards\spj.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\spk.gif" Link="Resources\Images\Cards\spk.gif" />
+	  <MauiImage Include="..\..\WinForms\Images\Cards\spq.gif" Link="Resources\Images\Cards\spq.gif" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="..\..\WinForms\Images\Players\cat.jpg" Link="Resources\Images\Players\cat.jpg" />
+	  <MauiImage Include="..\..\WinForms\Images\Players\dog.jpg" Link="Resources\Images\Players\dog.jpg" />
+	  <MauiImage Include="..\..\WinForms\Images\Players\rubberduck.jpg" Link="Resources\Images\Players\rubberduck.jpg" />
+	  <MauiImage Include="..\..\WinForms\Images\Players\soccerball.jpg" Link="Resources\Images\Players\soccerball.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="..\..\WinForms\Resources\splashpage.jpg" Link="Resources\Images\splashpage.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="..\..\WinForms\Resources\backgreen.png" Link="Resources\Images\backgreen.png" />
+	  <MauiImage Include="..\..\WinForms\Resources\background.jpg" Link="Resources\Images\background.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Views\GamePage.xaml.cs">
+	    <DependentUpon>GamePage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\SettingsPage.xaml.cs">
+	    <DependentUpon>SettingsPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\GamePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SettingsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="BlackJackGame\" />
+	  <Folder Include="Framwork\" />
+	  <Folder Include="Resources\Images\Cards\" />
+	  <Folder Include="Resources\Images\Players\" />
+	</ItemGroup>
+
+</Project>

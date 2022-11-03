@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CardGame.Views.GamePage"
+			 Title="{Binding Title}">
+	<Grid ColumnSpacing="2"
+		  RowSpacing="2">
+		<Image Source="background.jpg"
+                SemanticProperties.Description=""
+                Aspect="Fill"
+                HorizontalOptions="Center"
+			    VerticalOptions="Center"/>
+		<HorizontalStackLayout
+			Spacing="10" 
+			Padding="0,12,0,0" 
+			HorizontalOptions="Center">
+			<VerticalStackLayout HorizontalOptions="Center">
+				<Label Text="My Account"
+					   FontAttributes="Bold"
+					   VerticalOptions="Center"
+					   HorizontalOptions="Center" />
+				<Entry Text="{Binding MyAccount, StringFormat='${0}'}"
+					   FontAttributes="Bold"
+					   WidthRequest="80" 
+					   IsReadOnly="True" />
+			</VerticalStackLayout>
+
+			<VerticalStackLayout HorizontalOptions="Center">
+				<Label Text="Wins"
+					   FontAttributes="Bold"
+					   VerticalOptions="Center"
+					   HorizontalOptions="Center" />
+				<Entry Text="{Binding Wins}" 
+					   FontAttributes="Bold"
+					   WidthRequest="30"
+					   IsReadOnly="True"/>
+			</VerticalStackLayout>
+
+			<VerticalStackLayout HorizontalOptions="Center">
+				<Label Text="Losses"
+					   FontAttributes="Bold"
+					   VerticalOptions="Center"
+					   HorizontalOptions="Center" />
+				<Entry Text="{Binding Losses}" 
+					   FontAttributes="Bold"
+					   WidthRequest="30" 
+					   IsReadOnly="True"/>
+			</VerticalStackLayout>
+
+			<VerticalStackLayout HorizontalOptions="Center">
+				<Label Text="Ties"
+					   FontAttributes="Bold"
+					   VerticalOptions="Center"
+					   HorizontalOptions="Center" />
+				<Entry Text="{Binding Ties}" 
+					   FontAttributes="Bold"
+					   WidthRequest="30"
+					   IsReadOnly="True"/>
+			</VerticalStackLayout>
+		</HorizontalStackLayout>
+		<HorizontalStackLayout HorizontalOptions="Center"
+							   VerticalOptions="Start"
+							   Spacing="55"
+							   Padding="0,75">
+			<Grid HorizontalOptions="Start"
+				  VerticalOptions="Center">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*" />
+				</Grid.RowDefinitions>
+				<Image x:Name="dealerCard1"
+					   Grid.Row="0"
+					   Source="cl1.gif"
+					   WidthRequest="60"
+					   HeightRequest="80"
+					   HorizontalOptions="Center" 
+					   VerticalOptions="Center"/>
+				<Image x:Name="dealerCard2"
+					   Grid.Row="0"
+					   TranslationX="25"
+					   Source="cl2.gif"
+					   WidthRequest="60"
+					   HeightRequest="80"
+					   HorizontalOptions="Center" 
+					   VerticalOptions="Center"/>
+				<Image x:Name="dealerCard3"
+					   Grid.Row="0"
+					   TranslationX="50"
+					   Source="cl3.gif"
+					   WidthRequest="60"
+					   HeightRequest="80"
+					   HorizontalOptions="Center"
+					   VerticalOptions="Center"/>
+				<Image x:Name="dealerCard4"
+					   Grid.Row="0"
+					   TranslationX="75"
+					   Source="cl4.gif"
+					   WidthRequest="60"
+					   HeightRequest="80"
+					   HorizontalOptions="Center" 
+					   VerticalOptions="Center"/>
+				<Image x:Name="dealerCard5"
+					   Grid.Row="0"
+					   TranslationX="100"
+					   Source="cl5.gif"
+					   WidthRequest="60"
+					   HeightRequest="80"
+					   HorizontalOptions="Center" 
+					   VerticalOptions="Center"/>
+				<Image x:Name="dealerCard6"
+					   Grid.Row="0"
+					   TranslationX="125"
+					   Source="cl6.gif"
+					   WidthRequest="60"
+					   HeightRequest="80"
+					   HorizontalOptions="Center"
+					   VerticalOptions="Center"/>
+			</Grid>
+			<Label x:Name="lblGameOver"
+				   Text="GAME OVER"
+				   TextColor="Yellow"
+				   FontSize="Large"
+				   HorizontalOptions="End"
+				   VerticalOptions="Center" 
+				   IsVisible="true"
+				   Opacity="0"
+				   />
+			<Grid HorizontalOptions="End"
+				  VerticalOptions="Center"
+				  >
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*" />
+				</Grid.RowDefinitions>
+				<Image x:Name="deckCard1"
+					   Grid.Row="0"
+					   Source="cardskin.png"
+					   WidthRequest="60"
+					   HeightRequest="80"
+					   HorizontalOptions="Center" 
+					   VerticalOptions="Center"/>
+				<Image x:Name="deckCard2"
+					   Grid.Row="0"
+					   TranslationX="10"
+					   TranslationY="10"
+					   Source="cardskin.png"
+					   WidthRequest="60"
+					   HeightRequest="80"
+					   HorizontalOptions="Center" 
+					   VerticalOptions="Center"/>
+				<Image x:Name="deckCard3"
+					   Grid.Row="0"
+					   TranslationX="20"
+					   TranslationY="20"
+					   Source="cardskin.png"
+					   WidthRequest="60"
+					   HeightRequest="80"
+					   HorizontalOptions="Center"
+					   VerticalOptions="Center"/>
+			</Grid>
+		</HorizontalStackLayout>
+
+		<VerticalStackLayout Padding="0,110" 
+							 HorizontalOptions="Center" 
+							 VerticalOptions="End">
+			<Border WidthRequest="82"
+					HeightRequest="82"
+					Stroke="Blue"
+					StrokeThickness="3"
+					StrokeShape="RoundRectange 50">
+				<Border.Shadow>
+					<Shadow Brush="Black"
+							Offset="10,10"
+							Opacity="0.8" />
+				</Border.Shadow>
+				<Image x:Name="imgPlayerPicture"
+					   Aspect="AspectFit"
+					   WidthRequest="80"
+					   HeightRequest="80"
+					   HorizontalOptions="Center" 
+					   VerticalOptions="Center"/>
+			</Border>
+			<HorizontalStackLayout Spacing="20">
+				<Label x:Name="lblPlayerName" 
+					   TextColor="White"
+					   FontAttributes="Bold"
+					   HorizontalOptions="Center"
+					   VerticalOptions="Center" />
+				<HorizontalStackLayout 
+					HorizontalOptions="Center"
+					VerticalOptions="Center">
+					<Grid HorizontalOptions="Start"
+						  VerticalOptions="Center">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*" />
+						</Grid.RowDefinitions>
+						<Image x:Name="playerCard1"
+							   Grid.Row="0"
+							   Source="cl1.gif"
+							   WidthRequest="60"
+							   HeightRequest="80"
+							   HorizontalOptions="Center" 
+							   VerticalOptions="Center"/>
+						<Image x:Name="playerCard2"
+							   Grid.Row="0"
+							   TranslationX="25"
+							   Source="cl2.gif"
+							   WidthRequest="60"
+							   HeightRequest="80"
+							   HorizontalOptions="Center" 
+							   VerticalOptions="Center"/>
+						<Image x:Name="playerCard3"
+							   Grid.Row="0"
+							   TranslationX="50"
+							   Source="cl3.gif"
+							   WidthRequest="60"
+							   HeightRequest="80"
+							   HorizontalOptions="Center"
+							   VerticalOptions="Center"/>
+						<Image x:Name="playerCard4"
+							   Grid.Row="0"
+							   TranslationX="75"
+							   Source="cl4.gif"
+							   WidthRequest="60"
+							   HeightRequest="80"
+							   HorizontalOptions="Center" 
+							   VerticalOptions="Center"/>
+						<Image x:Name="playerCard5"
+							   Grid.Row="0"
+							   TranslationX="100"
+							   Source="cl5.gif"
+							   WidthRequest="60"
+							   HeightRequest="80"
+							   HorizontalOptions="Center" 
+							   VerticalOptions="Center"/>
+						<Image x:Name="playerCard6"
+							   Grid.Row="0"
+							   TranslationX="125"
+							   Source="cl6.gif"
+							   WidthRequest="60"
+							   HeightRequest="80"
+							   HorizontalOptions="Center"
+							   VerticalOptions="Center"/>
+					</Grid>
+
+				</HorizontalStackLayout>
+			</HorizontalStackLayout>
+			<Label x:Name="lblPlayerTotal"
+					   TextColor="White"
+					   Text="{Binding PlayerTotal}"
+					   HorizontalOptions="End"
+					   VerticalOptions="End" />
+		</VerticalStackLayout>
+
+		<VerticalStackLayout VerticalOptions="End">
+			<HorizontalStackLayout Spacing="10" Padding="2" HorizontalOptions="Center">
+				<Grid HorizontalOptions="Center"
+					  VerticalOptions="Center">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<ImageButton x:Name="btn10"
+								 Grid.Row="0"
+								 Source="coin1.gif"
+								 WidthRequest="50"
+								 HeightRequest="50" 
+								 HorizontalOptions="Center" 
+								 VerticalOptions="Center"
+								 Clicked="btn10_Clicked"/>
+					<Label Text="10" 
+						   Grid.Row="0"
+						   FontAttributes="Bold"
+						   HorizontalOptions="Center"
+						   VerticalOptions="Center"/>
+					
+				</Grid>
+				<Grid HorizontalOptions="Center"
+					  VerticalOptions="Center">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<ImageButton x:Name="btn25"
+								 Grid.Row="0"
+								 Source="coin2.gif"
+								 WidthRequest="50"
+								 HeightRequest="50" 
+								 HorizontalOptions="Center" 
+								 VerticalOptions="Center"
+								 Clicked="btn25_Clicked"/>
+					<Label Text="25" 
+						   Grid.Row="0"
+						   FontAttributes="Bold"
+						   HorizontalOptions="Center"
+						   VerticalOptions="Center"/>
+
+				</Grid>
+				<Grid HorizontalOptions="Center"
+					  VerticalOptions="Center">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<ImageButton x:Name="btn50"
+								 Grid.Row="0"
+								 Source="coin3.gif"
+								 WidthRequest="50"
+								 HeightRequest="50" 
+								 HorizontalOptions="Center" 
+								 VerticalOptions="Center"
+								 Clicked="btn50_Clicked"/>
+					<Label Text="50" 
+						   Grid.Row="0"
+						   FontAttributes="Bold"
+						   HorizontalOptions="Center"
+						   VerticalOptions="Center"/>
+
+				</Grid>
+				<Grid HorizontalOptions="Center"
+					  VerticalOptions="Center">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<ImageButton x:Name="btn100"
+								 Grid.Row="0"
+								 Source="coin4.gif"
+								 WidthRequest="50"
+								 HeightRequest="50" 
+								 HorizontalOptions="Center" 
+								 VerticalOptions="Center"
+								 Clicked="btn100_Clicked"/>
+					<Label Text="100" 
+						   Grid.Row="0"
+						   FontAttributes="Bold"
+						   HorizontalOptions="Center"
+						   VerticalOptions="Center"/>
+
+				</Grid>
+				<VerticalStackLayout HorizontalOptions="Center">
+					<Label Text="My Bet"
+						   FontAttributes="Bold"
+						   VerticalOptions="Center"
+						   HorizontalOptions="Center" />
+					
+					<Entry Text="{Binding MyBet, StringFormat='${0}'}"
+					   FontAttributes="Bold"
+					   WidthRequest="40" 
+					   IsReadOnly="True" />
+				</VerticalStackLayout>
+				<Button x:Name="btnClear" 
+						Text="Clear" 
+						WidthRequest="80"
+						Clicked="btnClear_Clicked"/>
+			</HorizontalStackLayout>
+			<HorizontalStackLayout Spacing="10" HorizontalOptions="Center" VerticalOptions="End">
+				<Button x:Name="btnDoubleDown" 
+						Text="Double Down" 
+						WidthRequest="80"
+						IsVisible="false"
+						Clicked="btnDoubleDown_Clicked"/>
+				<Button x:Name="btnHit" 
+						Text="Hit" 
+						WidthRequest="80"
+						Clicked="btnHit_Clicked"/>
+				<Button x:Name="btnStand"
+						Text="Stand" 
+						WidthRequest="80"
+						Clicked="btnStand_Clicked"/>
+				<Button x:Name="btnDeal"
+						Text="Deal" 
+						WidthRequest="80"
+						Clicked="btnDeal_Clicked"/>
+			</HorizontalStackLayout>
+		</VerticalStackLayout>
+	</Grid>
+</ContentPage>

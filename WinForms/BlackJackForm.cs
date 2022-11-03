@@ -3,7 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using BlackJack.CardGameFramework;
+using CardGame.Framework;
 
 namespace BlackJack
 {
@@ -12,7 +12,7 @@ namespace BlackJack
         #region Fields
 
         //Creates a new blackjack game with one player and an inital balance set through the settings designer
-        private BlackJackGame game = new BlackJackGame(Properties.Settings.Default.InitBalance);
+        private BlackJackGame game = new BlackJackGame(Properties.Settings.Default.InitBalance, Properties.Settings.Default.PlayerImage, Properties.Settings.Default.PlayerName);
         private PictureBox[] playerCards;
         private PictureBox[] dealerCards;
         private bool firstTurn;

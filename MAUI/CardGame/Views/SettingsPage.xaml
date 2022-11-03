@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CardGame.Views.SettingsPage"
+             Title="Settings">
+	<Grid>
+		<Image Source="backgreen.png"   
+                Aspect="Fill"
+                HorizontalOptions="CenterAndExpand"
+			    VerticalOptions="CenterAndExpand"/>
+		<VerticalStackLayout HorizontalOptions="Center"
+							 Spacing="10">
+			<HorizontalStackLayout>
+				<Label 
+					Text="Player Name:"
+					VerticalOptions="Center" 
+					HorizontalOptions="Center" />
+				<Entry x:Name="edtPlayerName" WidthRequest="120" />
+			</HorizontalStackLayout>
+			<VerticalStackLayout>
+				<Label Text="Player Picture:"
+					VerticalOptions="Start" 
+					HorizontalOptions="Start" />
+				<HorizontalStackLayout Padding="10,0,0,0">
+					<ListView x:Name="playerImageListView" 
+							  ItemsSource="{Binding PlayerImages}"
+							  WidthRequest="220"
+							  HeightRequest="350"
+							  ItemSelected="playerImageListView_ItemSelected">
+						<ListView.ItemTemplate>
+							<DataTemplate>
+								<ViewCell>
+									<Image Source="{Binding}"
+										   WidthRequest="100" 
+										   HeightRequest="100" />
+								</ViewCell>
+							</DataTemplate>
+						</ListView.ItemTemplate>
+					</ListView>
+					<Image x:Name="previewImage" 
+					   WidthRequest="200"
+					   HeightRequest="200" 
+					   VerticalOptions="Center"/>
+				</HorizontalStackLayout>
+			</VerticalStackLayout>
+			<HorizontalStackLayout HorizontalOptions="EndAndExpand">
+				<Button x:Name="btnOK" Text="OK" WidthRequest="80" Clicked="btnOK_Clicked"/>
+				<Button x:Name="btnCancel" Text="Cancel" WidthRequest="80" Clicked="btnCancel_Clicked"/>
+			</HorizontalStackLayout>
+		</VerticalStackLayout>
+	</Grid>
+</ContentPage>
