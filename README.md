@@ -12,9 +12,11 @@ Our goal is to update the original starter kit to work with modern GUI systems, 
 
 ## Versions
 WinForms (inital check-in with VS2022 sln)
+
 ![image](https://user-images.githubusercontent.com/271363/199704850-81d054b5-5216-46df-b0aa-68e78bb87bd6.png)
 
 MAUI (Android, iOS, MacOS and Windows)
+
 ![image](https://user-images.githubusercontent.com/271363/199710705-763cd822-861b-469b-9a3c-5b030090318a.png)
 
 
